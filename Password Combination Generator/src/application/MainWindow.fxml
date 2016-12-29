@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <HBox prefHeight="157.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="233.0" prefWidth="612.0">
+               <children>
+                  <Label text="Characters to be used:">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="allCaps" mnemonicParsing="false" text="All upper case letters">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="allSmall" mnemonicParsing="false" text="All lower case letters">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="allNum" layoutX="120.0" layoutY="65.0" mnemonicParsing="false" text="All numbers">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="symbols" layoutX="10.0" layoutY="93.0" mnemonicParsing="false" text="Common symbols">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="160.0" prefWidth="612.0">
+         <children>
+            <Label text="Password length:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <RadioButton fx:id="exactlyRad" mnemonicParsing="false" text="Exactly:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <HBox fx:id="exactlyBox" prefHeight="87.0" prefWidth="612.0">
+               <children>
+                  <TextField fx:id="exactlyTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="180.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children></HBox>
+            <RadioButton fx:id="multiRad" mnemonicParsing="false" text="Multilength:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <HBox fx:id="multilengthBox" prefHeight="84.0" prefWidth="612.0">
+               <children>
+                  <Label fx:id="fromLabel" text="From:">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="180.0" right="10.0" top="13.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="fromTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="toLabel" text="To:">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="13.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+         </children>
+      </VBox>
+      <HBox prefHeight="147.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="86.0" prefWidth="606.0">
+               <children>
+                  <Label text="Known positions:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <CheckBox fx:id="enterPos" mnemonicParsing="false" text="Enter Positions:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="110.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <VBox fx:id="positionsBox" prefHeight="122.0" prefWidth="606.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Beggining:">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="180.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="begginingTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="End:">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="180.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="endTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="85.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="submitButt" mnemonicParsing="false" onAction="#submitButtClicked" prefHeight="30.0" prefWidth="100.0" text="Submit">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>
